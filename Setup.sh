@@ -48,13 +48,32 @@ if ! [[ $IP_NUM =~ ^-?[0-9]+$ ]]; then
     exit
 fi
 
-if [[ $IP_NUM > 254 || $IP_NUM < 1 ]]; then
+if [ "$IP_NUM" -ge 255 -o "$IP_NUM" -le 0 ] ; then
    echo "ipnum (ARG3: $IP_NUM) is out of range (1-254)"
    echo $usage
    exit
 fi
 
-echo $IP_ADDR
+
+
+echo "This device will be configured as "$IP_ADDR
+echo ""
+
+if ! [[ -z "$4" ]] ; then
+    echo "Test-mode: no changes will be applied"
+    echo ""
+    echo "Configuring dhcpcd.conf..."
+    echo "Configuring hostapd..."
+    echo "Setting up dnsmasq..."
+    echo "Setting up ipv4 forwarding..."
+    echo "Starting services..."
+    echo ""
+    echo ""
+    echo "You may want to restart now..."
+    exit
+fi
+
+#test zone
 
 ##########################################################
 #                                                        #
