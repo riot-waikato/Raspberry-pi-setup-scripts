@@ -4,18 +4,18 @@ There are currently two setup scripts: `Setup.sh` and `SimpleSetup.sh`. SimpleSe
 
 Current usage for SimpleSetup.sh:
 
-```sudo ./SimpleSetup.sh NUM
+``` sudo ./SimpleSetup.sh NUM
 
 or, for test mode, as described below:
 
-```sudo ./SimpleSetup.sh NUM S
+``` sudo ./SimpleSetup.sh NUM S
 
 where s is any input.
 
 
 Current usage for Setup.sh:
 
-```sudo ./Setup.sh SUFF PASS NUM
+``` sudo ./Setup.sh SUFF PASS NUM
 
 where:
 * SUFF is an SSID suffix
