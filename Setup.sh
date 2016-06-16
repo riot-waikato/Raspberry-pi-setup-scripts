@@ -54,7 +54,10 @@ if [ "$IP_NUM" -ge 255 -o "$IP_NUM" -le 0 ] ; then
    exit
 fi
 
-
+if [ "$(id -u)" != "0" ] ; then
+    echo "Requires root permissions"
+    exit 1
+fi
 
 echo "This device will be configured as "$IP_ADDR
 echo ""
