@@ -12,6 +12,10 @@ WPA_KEY="riotwaikato"
 printf -v SSIDNUM "%03d" $NUMBER
 
 #echo $SSIDNUM
+if [ "$(id -u)" != "0" ] ; then
+    echo "Requires root permissions"
+    exit 1
+fi
 
 if [[ -z "$1" ]] ; then
     echo $USAGE
