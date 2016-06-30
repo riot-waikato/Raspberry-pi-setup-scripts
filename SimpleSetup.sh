@@ -2,8 +2,8 @@
 #actually installing all of these on an sd card will take ~1-2 hours. Prepare to waste time.
 echo "sudo apt-get update"
 sudo apt-get update
-echo "yes | sudo apt-get install emacs dnsmasq hostapd" #network-manager
-yes | sudo apt-get install emacs dnsmasq hostapd network-manager
+echo "yes | sudo apt-get install emacs dnsmasq hostapd"
+yes | sudo apt-get install emacs dnsmasq hostapd
 
 NUMBER=$1
 USAGE="usage: [NUMBER]"
